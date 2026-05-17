@@ -17,10 +17,8 @@ body{
   flex-direction:column;
   align-items:center;
   justify-content:flex-start;
-
   width:100vw;
   height:100dvh;
-
   padding:8px;
 }
 
@@ -62,19 +60,9 @@ button:active{
 }
 
 @keyframes blink{
-
-  0%{
-    opacity:1;
-  }
-
-  50%{
-    opacity:.35;
-  }
-
-  100%{
-    opacity:1;
-  }
-
+  0%{opacity:1;}
+  50%{opacity:.35;}
+  100%{opacity:1;}
 }
 
 /* ===== GAME ===== */
@@ -86,17 +74,12 @@ button:active{
 
 #titleBackBtn{
   position:absolute;
-
   top:8px;
   right:8px;
-
   z-index:100;
-
   color:#0000ff;
   border:3px solid #0000ff;
-
   background:#fff;
-
   font-size:13px;
   padding:6px 10px;
 }
@@ -104,15 +87,12 @@ button:active{
 #topBar{
   width:100%;
   max-width:520px;
-
   display:flex;
   justify-content:flex-start;
   gap:24px;
   align-items:center;
-
   margin-top:56px;
   margin-bottom:10px;
-
   padding:0 8px;
 }
 
@@ -129,82 +109,57 @@ button:active{
 #mapWrap{
   width:100%;
   flex:1;
-
   display:flex;
   justify-content:center;
   align-items:center;
-
   overflow:hidden;
-
   padding-top:8px;
 }
 
 #map{
   position:relative;
-
   width:500px;
   height:640px;
-
-  padding-top:24px;
-
   border:4px solid #000;
   background:#dff5d8;
-
   transform-origin:top center;
 }
 
 .road{
   position:absolute;
-
   height:10px;
-
   background:#b89c6a;
-
   border-radius:999px;
-
   transform-origin:left center;
-
   z-index:1;
 }
 
 .house{
   position:absolute;
-
   width:52px;
   height:46px;
-
   border:3px solid #000;
   background:#fff;
-
   z-index:5;
 }
 
 .house::before{
   content:"▲";
-
   position:absolute;
-
   top:-42px;
   left:50%;
-
   transform:translateX(-50%);
-
   color:#000;
-
   font-size:52px;
   line-height:1;
 }
 
 .house::after{
   content:"田";
-
   position:absolute;
-
   left:50%;
   top:50%;
-
   transform:translate(-50%,-50%);
-
   font-size:24px;
 }
 
@@ -226,38 +181,27 @@ button:active{
 
 #base{
   position:absolute;
-
   left:175px;
   top:560px;
-
   width:90px;
   height:38px;
-
   border:3px solid #000;
   background:#fff;
-
   display:flex;
   align-items:center;
   justify-content:center;
-
   font-size:18px;
-
   z-index:10;
 }
 
 .suspect{
   position:absolute;
-
-  width:70px;
-  height:70px;
-
+  width:60px;
+  height:60px;
   object-fit:contain;
   image-rendering:pixelated;
-
   z-index:20;
-
   cursor:pointer;
-
   transition:
     opacity .35s ease,
     transform .35s ease;
@@ -268,15 +212,8 @@ button:active{
 }
 
 @keyframes suspectBlink{
-
-  from{
-    transform:scale(1);
-  }
-
-  to{
-    transform:scale(1.16);
-  }
-
+  from{transform:scale(1);}
+  to{transform:scale(1.16);}
 }
 
 .suspect.fadeOut{
@@ -290,17 +227,12 @@ button:active{
 
 #boy{
   position:absolute;
-
   width:92px;
   height:92px;
-
   image-rendering:pixelated;
-
   z-index:30;
-
   left:174px;
-  top:530px;
-
+  top:533px;
   transition:
     left .36s linear,
     top .36s linear;
@@ -337,24 +269,17 @@ button:active{
 }
 
 #resultButtons{
-
   width:100%;
-
   display:flex;
   flex-direction:column;
   align-items:center;
-
   gap:10px;
-
 }
 
 #shareBtn,
 #retryBtn,
 #homeBtn{
-
   width:100%;
   max-width:320px;
-
   font-size:18px;
-
 }

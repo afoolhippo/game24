@@ -3,67 +3,47 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0,viewport-fit=cover">
-
 <title>セコムボーイ</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 <link href="https://fonts.googleapis.com/css2?family=DotGothic16&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
 <div id="app">
 
-<!-- タイトル -->
 <section id="titleScreen" class="screen active">
-
-  <img
-    id="titleImage"
-    src="title.png"
-    alt="セコムボーイ"
-  >
+  <img id="titleImage" src="title.png" alt="セコムボーイ">
 
   <p id="titleRule">
     不審者をタップ！<br>
     セコムボーイが町を巡回します。
   </p>
 
-  <button id="startBtn">
-    タップしてスタート
-  </button>
-
+  <button id="startBtn">タップしてスタート</button>
 </section>
 
-<!-- ゲーム -->
 <section id="gameScreen" class="screen">
 
-  <button id="titleBackBtn">
-    タイトルへ戻る
-  </button>
+  <button id="titleBackBtn">タイトルへ戻る</button>
 
   <div id="topBar">
-
     <div class="timeBox">
       残り時間 <span id="time">30</span>
     </div>
-
     <div class="scoreBox">
       対応数 <span id="score">0</span>
     </div>
-
   </div>
 
   <div id="mapWrap">
-
     <div id="map">
 
       <div id="roads"></div>
 
-      <!-- 家 -->
       <div class="house" id="house1"></div>
       <div class="house" id="house2"></div>
       <div class="house" id="house3"></div>
@@ -77,7 +57,6 @@
       <div class="house" id="house11"></div>
       <div class="house" id="house12"></div>
 
-      <!-- 不審者 -->
       <img class="suspect hidden" id="suspect1" src="dorobou.png">
       <img class="suspect hidden" id="suspect2" src="dorobou.png">
       <img class="suspect hidden" id="suspect3" src="dorobou.png">
@@ -91,55 +70,31 @@
       <img class="suspect hidden" id="suspect11" src="dorobou.png">
       <img class="suspect hidden" id="suspect12" src="dorobou.png">
 
-      <!-- セコムボーイ -->
       <img id="boy" src="secomboy.png">
 
-      <!-- 詰所 -->
-      <div id="base">
-        詰所
-      </div>
+      <div id="base">詰所</div>
 
     </div>
-
   </div>
 
 </section>
 
-<!-- リザルト -->
 <section id="resultScreen" class="screen">
 
-  <h2 id="rankTitle">
-    即駆けつけ
-  </h2>
+  <h2 id="rankTitle">即駆けつけ</h2>
 
-  <img
-    id="resultImage"
-    src=""
-    alt="result"
-  >
+  <img id="resultImage" src="" alt="result">
 
-  <div id="finalScore">
-    14件対応
-  </div>
+  <div id="finalScore">14件対応</div>
 
   <p id="resultComment">
     今日も被害を未然に防いだ。
   </p>
 
   <div id="resultButtons">
-
-    <button id="shareBtn">
-      Xでシェア
-    </button>
-
-    <button id="retryBtn">
-      もう1回遊ぶ
-    </button>
-
-    <button id="homeBtn">
-      カバゲーセンへ
-    </button>
-
+    <button id="shareBtn">Xでシェア</button>
+    <button id="retryBtn">もう1回遊ぶ</button>
+    <button id="homeBtn">カバゲーセンへ</button>
   </div>
 
 </section>

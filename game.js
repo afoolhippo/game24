@@ -7,23 +7,23 @@ seGood.volume = 0.18;
 
 const nodes = {
 
-  1:{x:56,y:44},
-  2:{x:171,y:44},
-  3:{x:341,y:54},
+  1:{x:56,y:63},
+  2:{x:171,y:63},
+  3:{x:341,y:73},
 
-  4:{x:51,y:129},
-  5:{x:186,y:139},
-  6:{x:331,y:139},
+  4:{x:51,y:158},
+  5:{x:186,y:168},
+  6:{x:331,y:168},
 
-  7:{x:66,y:219},
-  8:{x:201,y:204},
-  9:{x:336,y:229},
+  7:{x:66,y:268},
+  8:{x:201,y:253},
+  9:{x:336,y:278},
 
-  10:{x:71,y:309},
-  11:{x:201,y:309},
-  12:{x:211,y:384},
+  10:{x:71,y:378},
+  11:{x:201,y:378},
+  12:{x:211,y:483},
 
-  base:{x:220,y:460}
+  base:{x:220,y:579}
 
 };
 
@@ -103,7 +103,7 @@ function drawRoads(){
     A.x + "px";
 
     road.style.top =
-    A.y + "px";
+    A.y - 5 + "px";
 
     road.style.width =
     length + "px";
@@ -131,10 +131,10 @@ for(let i=1;i<=12;i++){
   const p = nodes[i];
 
   suspects[i].style.left =
-  p.x - 62 + "px";
+  p.x - 30 + "px";
 
   suspects[i].style.top =
-  p.y - 64 + "px";
+  p.y - 30 + "px";
 
 }
 
@@ -189,10 +189,10 @@ let spawnTimer = null;
 function fitMap(){
 
   const scaleX =
-  mapWrap.clientWidth / 440;
+  mapWrap.clientWidth / 500;
 
   const scaleY =
-  mapWrap.clientHeight / 540;
+  mapWrap.clientHeight / 640;
 
   const scale =
   Math.min(scaleX,scaleY,1);
