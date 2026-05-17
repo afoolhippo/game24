@@ -1,0 +1,344 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  background:#fff;
+  color:#000;
+  overflow:hidden;
+  font-family:'DotGothic16',sans-serif;
+  -webkit-tap-highlight-color:transparent;
+}
+
+.screen{
+  display:none;
+  flex-direction:column;
+  align-items:center;
+  justify-content:flex-start;
+
+  width:100vw;
+  height:100dvh;
+
+  padding:8px;
+}
+
+.screen.active{
+  display:flex;
+}
+
+#titleScreen{
+  gap:14px;
+}
+
+#titleImage{
+  width:100%;
+  max-width:420px;
+  image-rendering:pixelated;
+  cursor:pointer;
+}
+
+#titleRule{
+  text-align:center;
+  line-height:1.7;
+  font-size:17px;
+}
+
+button{
+  font-family:'DotGothic16',sans-serif;
+  background:#fff;
+  border:3px solid #000;
+  padding:10px 18px;
+  font-size:18px;
+}
+
+button:active{
+  transform:scale(.96);
+}
+
+#startBtn{
+  animation:blink 1s infinite;
+}
+
+@keyframes blink{
+
+  0%{
+    opacity:1;
+  }
+
+  50%{
+    opacity:.35;
+  }
+
+  100%{
+    opacity:1;
+  }
+
+}
+
+/* ===== GAME ===== */
+
+#gameScreen{
+  width:100%;
+  box-sizing:border-box;
+}
+
+#titleBackBtn{
+  position:absolute;
+
+  top:8px;
+  right:8px;
+
+  z-index:100;
+
+  color:#0000ff;
+  border:3px solid #0000ff;
+
+  background:#fff;
+
+  font-size:13px;
+  padding:6px 10px;
+}
+
+#topBar{
+  width:100%;
+  max-width:440px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-top:42px;
+  margin-bottom:6px;
+
+  padding:0 4px;
+}
+
+.timeBox{
+  color:#0000ff;
+  font-size:16px;
+}
+
+.scoreBox{
+  color:#ff0000;
+  font-size:16px;
+}
+
+#mapWrap{
+  width:100%;
+  flex:1;
+
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+
+  overflow:hidden;
+}
+
+#map{
+  position:relative;
+
+  width:440px;
+  height:540px;
+
+  border:4px solid #000;
+  background:#dff5d8;
+
+  transform-origin:top center;
+}
+
+.road{
+  position:absolute;
+  height:6px;
+  background:#d8c9a4;
+  transform-origin:left center;
+  z-index:1;
+}
+
+.house{
+  position:absolute;
+
+  width:52px;
+  height:46px;
+
+  border:3px solid #000;
+  background:#fff;
+
+  z-index:5;
+}
+
+.house::before{
+  content:"▲";
+
+  position:absolute;
+
+  top:-42px;
+  left:50%;
+
+  transform:translateX(-50%);
+
+  color:#000;
+
+  font-size:52px;
+  line-height:1;
+}
+
+.house::after{
+  content:"田";
+
+  position:absolute;
+
+  left:50%;
+  top:50%;
+
+  transform:translate(-50%,-50%);
+
+  font-size:24px;
+}
+
+#house1{left:30px;top:20px;}
+#house2{left:145px;top:20px;}
+#house3{left:315px;top:30px;}
+
+#house4{left:25px;top:105px;}
+#house5{left:160px;top:115px;}
+#house6{left:305px;top:115px;}
+
+#house7{left:40px;top:195px;}
+#house8{left:175px;top:180px;}
+#house9{left:310px;top:205px;}
+
+#house10{left:45px;top:285px;}
+#house11{left:175px;top:285px;}
+#house12{left:185px;top:360px;}
+
+#base{
+  position:absolute;
+
+  left:175px;
+  top:442px;
+
+  width:90px;
+  height:38px;
+
+  border:3px solid #000;
+  background:#fff;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  font-size:18px;
+
+  z-index:10;
+}
+
+.suspect{
+  position:absolute;
+
+  width:70px;
+  height:70px;
+
+  object-fit:contain;
+  image-rendering:pixelated;
+
+  z-index:20;
+
+  cursor:pointer;
+
+  transition:
+    opacity .35s ease,
+    transform .35s ease;
+}
+
+.suspect.queued{
+  animation:suspectBlink .4s infinite alternate;
+}
+
+@keyframes suspectBlink{
+
+  from{
+    transform:scale(1);
+  }
+
+  to{
+    transform:scale(1.16);
+  }
+
+}
+
+.suspect.fadeOut{
+  opacity:0;
+  transform:scale(.4);
+}
+
+.hidden{
+  display:none;
+}
+
+#boy{
+  position:absolute;
+
+  width:92px;
+  height:92px;
+
+  image-rendering:pixelated;
+
+  z-index:30;
+
+  left:174px;
+  top:416px;
+
+  transition:
+    left .36s linear,
+    top .36s linear;
+}
+
+/* ===== RESULT ===== */
+
+#resultScreen{
+  gap:12px;
+  padding-top:16px;
+}
+
+#rankTitle{
+  color:#0000ff;
+  font-size:30px;
+}
+
+#resultImage{
+  width:180px;
+  height:180px;
+  image-rendering:pixelated;
+  object-fit:contain;
+}
+
+#finalScore{
+  color:#ff0000;
+  font-size:38px;
+}
+
+#resultComment{
+  text-align:center;
+  line-height:1.6;
+  font-size:18px;
+}
+
+#shareBtn{
+  width:100%;
+  max-width:420px;
+}
+
+#resultButtons{
+  width:100%;
+  max-width:420px;
+
+  display:flex;
+  gap:10px;
+}
+
+#retryBtn,
+#homeBtn{
+  flex:1;
+}
