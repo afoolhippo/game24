@@ -3,7 +3,7 @@ bgm.loop = true;
 bgm.volume = 0.35;
 
 const seGood = new Audio("se_good.mp3");
-seGood.volume = 0.55;
+seGood.volume = 0.18;
 
 const nodes = {
 

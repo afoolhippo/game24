@@ -103,26 +103,27 @@ button:active{
 
 #topBar{
   width:100%;
-  max-width:440px;
+  max-width:520px;
 
   display:flex;
-  justify-content:space-between;
+  justify-content:flex-start;
+  gap:24px;
   align-items:center;
 
-  margin-top:42px;
-  margin-bottom:6px;
+  margin-top:56px;
+  margin-bottom:10px;
 
-  padding:0 4px;
+  padding:0 8px;
 }
 
 .timeBox{
   color:#0000ff;
-  font-size:16px;
+  font-size:22px;
 }
 
 .scoreBox{
   color:#ff0000;
-  font-size:16px;
+  font-size:22px;
 }
 
 #mapWrap{
@@ -131,16 +132,20 @@ button:active{
 
   display:flex;
   justify-content:center;
-  align-items:flex-start;
+  align-items:center;
 
   overflow:hidden;
+
+  padding-top:8px;
 }
 
 #map{
   position:relative;
 
-  width:440px;
-  height:540px;
+  width:500px;
+  height:640px;
+
+  padding-top:24px;
 
   border:4px solid #000;
   background:#dff5d8;
@@ -150,9 +155,15 @@ button:active{
 
 .road{
   position:absolute;
-  height:6px;
-  background:#d8c9a4;
+
+  height:10px;
+
+  background:#b89c6a;
+
+  border-radius:999px;
+
   transform-origin:left center;
+
   z-index:1;
 }
 
@@ -197,27 +208,27 @@ button:active{
   font-size:24px;
 }
 
-#house1{left:30px;top:20px;}
-#house2{left:145px;top:20px;}
-#house3{left:315px;top:30px;}
+#house1{left:30px;top:40px;}
+#house2{left:145px;top:40px;}
+#house3{left:315px;top:50px;}
 
-#house4{left:25px;top:105px;}
-#house5{left:160px;top:115px;}
-#house6{left:305px;top:115px;}
+#house4{left:25px;top:135px;}
+#house5{left:160px;top:145px;}
+#house6{left:305px;top:145px;}
 
-#house7{left:40px;top:195px;}
-#house8{left:175px;top:180px;}
-#house9{left:310px;top:205px;}
+#house7{left:40px;top:245px;}
+#house8{left:175px;top:230px;}
+#house9{left:310px;top:255px;}
 
-#house10{left:45px;top:285px;}
-#house11{left:175px;top:285px;}
-#house12{left:185px;top:360px;}
+#house10{left:45px;top:355px;}
+#house11{left:175px;top:355px;}
+#house12{left:185px;top:460px;}
 
 #base{
   position:absolute;
 
   left:175px;
-  top:442px;
+  top:560px;
 
   width:90px;
   height:38px;
@@ -288,7 +299,7 @@ button:active{
   z-index:30;
 
   left:174px;
-  top:416px;
+  top:530px;
 
   transition:
     left .36s linear,
@@ -325,20 +336,25 @@ button:active{
   font-size:18px;
 }
 
-#shareBtn{
-  width:100%;
-  max-width:420px;
-}
-
 #resultButtons{
+
   width:100%;
-  max-width:420px;
 
   display:flex;
+  flex-direction:column;
+  align-items:center;
+
   gap:10px;
+
 }
 
+#shareBtn,
 #retryBtn,
 #homeBtn{
-  flex:1;
+
+  width:100%;
+  max-width:320px;
+
+  font-size:18px;
+
 }
